@@ -1,1 +1,44 @@
-/* developer styles goes here */
+body {
+    color: #00263e;
+    background: linear-gradient(rgb(255, 105, 180), rgb(255, 186, 0));
+    font-family: 'Nunito', sans-serif;
+}
+
+.container {
+    padding: 1rem;
+}
+
+h1 a {
+    color: #00263e;
+    text-decoration: none;
+}
+
+h1 {
+    letter-spacing: 5px;
+}
+
+h1::first-letter {
+    color: rgb(255, 105, 180);
+}
+
+header {
+    background-color: #fff;
+}
+
+.menu-icon {
+    width: 40px;
+    text-align: center;
+}
+
+header .flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media only screen and (min-width: 1300px) {
+    .container {
+        padding: 1rem 0;
+        max-width: 80rem;
+        margin: 0 auto;
+    }
+}
