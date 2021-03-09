@@ -1,11 +1,13 @@
 body {
     color: #00263e;
     background: linear-gradient(rgb(255, 105, 180), rgb(255, 186, 0));
+    /* default body paragraphs, a font family goes here*/
     font-family: 'Nunito', sans-serif;
 }
 
 .container {
     padding: 1rem;
+    position: relative;
 }
 
 h1 a {
@@ -21,6 +23,12 @@ h1::first-letter {
     color: rgb(255, 105, 180);
 }
 
+h2 {
+    font-size: 3rem;
+    color: #fff;
+    text-align: center;
+}
+
 header {
     background-color: #fff;
 }
@@ -28,11 +36,81 @@ header {
 .menu-icon {
     width: 40px;
     text-align: center;
+    cursor: pointer;
 }
 
 header .flex-container {
     display: flex;
     justify-content: space-between;
+}
+
+header a svg {
+    width: 15px;
+    height: 15px;
+}
+
+.main-menu a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #f89d70;
+    font-weight: 700;
+    display: block;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+}
+
+.main-menu a:hover,
+.main-menu a:active {
+    background-color: #e3eaf3;
+    border-radius: 5px;
+}
+
+.main-menu li {
+    line-height: 85px;
+    margin: 0 25px;
+    border-bottom: 1px solid #e3eaf3;
+}
+
+.main-menu li:last-of-type {
+    border-bottom: none;
+}
+
+.main-menu svg:last-of-type {
+    margin-right: auto;
+}
+
+.main-menu svg:first-of-type {
+    margin-right: 10px;
+}
+
+.dropdown-menu a {
+    color: #00263e;
+    font-weight: 400;
+    text-transform: none;
+}
+
+.dropdown-menu {
+    max-height: 0;
+    overflow: hidden;
+}
+
+.main-menu li:hover > .dropdown-menu {
+    max-height: initial;
+}
+
+nav {
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    background-color: #fff;
+    width: 100vw;
+    transition: all 0.6s ease;
+}
+
+.show-nav {
+    max-height: 100vh;
 }
 
 @media only screen and (min-width: 1300px) {
@@ -42,3 +120,10 @@ header .flex-container {
         margin: 0 auto;
     }
 }
+
+/* before handing in 
+finish wide screen
+copy paste header to every page should havew a different title
+validate your markup
+upload and submit a URL of the finished build
+*/
